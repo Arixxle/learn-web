@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .main-header{
+      background-color: #bdd;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    .main-menu{
+        position: absolute;
+        background-color: rgb(65, 110, 151,.5);
+    }
+    .main-menu a{
+        text-decoration: none;
+        padding: 5px 10px;
+        color: #fff;
+      }
+    .logo img{
+      vertical-align: bottom;
+    }
+    .content{
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 767px){
+      .main-menu{
+        width: 80%;
+        top: 100%;
+        left: -80%;
+        transition: .5s;
+        /* display: none; */
+        /* position: relative; */
+      }
+      .main-menu a{
+        display: block;
+      }
+      .main-menu a + a{
+        border-top: 1px solid #fff;
+      }
+      #main-control:checked ~ .main-header .main-menu{
+        /* display: block; */
+        left: 0;
+      }
+      .hb{
+        width: 40px;
+        height: 40px;
+        background-color: #cac;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+      }
+      .hb span{
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        display: block;
+        border-radius: 3px;
+        position: absolute;
+        transition: .5s;
+      }
+      .hb span:nth-child(1){
+        transform: translateY(10px) rotate(0deg);
+      }
+      .hb span:nth-child(3){
+        transform: translateY(-10px) rotate(0deg);
+      }
+      #main-control:checked ~ .main-header .hb span:nth-child(1){
+        transform: rotate(135deg);
+      }
+      #main-control:checked ~ .main-header .hb span:nth-child(2){
+        display: none;
+      }
+      #main-control:checked ~ .main-header .hb span:nth-child(3){
+        transform: rotate(-135deg);
+      }
+    }
+    @media screen and (min-width: 768px){
+      .main-header{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .main-menu{
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+      }
+      .main-menu a{
+        padding: 0 10px;
+      }
+
+
+
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="wrap">
+    <input type="checkbox" id="main-control">
+    <div class="main-header">
+      <div class="logo">
+        <img src="https://fakeimg.pl/100x40/#555/" alt="">
+      </div>
+      <label class="hb" for="main-control">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="main-menu">
+        <nav >
+          <a href="">Link</a>
+          <a href="">Link</a>
+          <a href="">Link</a>
+          <a href="">Link</a>
+          <a href="">Link</a>
+          <a href="">Link</a>
+        </nav>
+      </div>
+
+    </div>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quidem recusandae accusantium et, itaque qui a minima sunt voluptatum optio accusamus eligendi repudiandae obcaecati temporibus amet! Aliquam quaerat cupiditate corrupti.</p>
+      <p>Quo voluptatibus atque explicabo? Hic beatae autem optio quidem, vitae totam repellendus mollitia id maiores praesentium? Quia, recusandae, similique, consequatur repellat officia voluptate ut consequuntur nulla cupiditate modi consectetur quisquam.</p>
+      <p>Quod ducimus hic autem obcaecati reprehenderit ipsum voluptatem, voluptas accusamus, et quae quisquam vitae ex laudantium, aspernatur totam at voluptatibus rem tempore consequatur. Tenetur ratione, assumenda est ipsa optio itaque!</p>
+      <p>Libero, placeat autem deleniti magni dolore natus est aut, distinctio doloribus soluta ipsam nulla assumenda ullam molestias temporibus illum? Accusamus in labore quae distinctio ex cumque facilis placeat perferendis at!</p>
+      <p>Doloremque voluptates omnis enim dignissimos commodi, exercitationem pariatur animi veniam iusto consectetur numquam neque corrupti, at eum dolorem voluptatibus, fugit officia reprehenderit. Illum, sit at asperiores animi dolor itaque eos.</p>
+      <p>Vero explicabo repellendus asperiores amet nisi, placeat eum impedit? Distinctio impedit esse at odio, porro error laudantium expedita veniam iste voluptatibus, praesentium repellendus? Harum, ad nesciunt nobis fugit ut neque.</p>
+      <p>Molestiae, nesciunt molestias sunt beatae consequatur repudiandae est deleniti vero illo quis tempora ad voluptatum a veniam harum asperiores consequuntur in dolores expedita tenetur deserunt hic laboriosam. Possimus, deserunt voluptatum!</p>
+      <p>Doloremque dolorem eum error ea eaque ullam minima itaque, beatae saepe maxime, in atque non consequuntur corrupti ab iste molestias vitae at repellendus? Inventore, et. Sunt ratione quis tempora nulla?</p>
+      <p>Maiores laboriosam, nisi explicabo qui earum maxime. Molestiae doloremque explicabo, nulla earum aliquid natus est quam voluptatibus, consequatur ducimus in magni, odit voluptatum? Nesciunt et numquam tempora molestiae nobis a?</p>
+      <p>Doloribus rem deleniti vel. Blanditiis officia eum natus quisquam consectetur, autem facere nostrum exercitationem, ab enim voluptatum reiciendis. Iusto ullam eos, eum velit sequi aliquam! Doloribus sint velit dolore enim.</p>
+    </div>
+  </div>
+</body>
+</html>

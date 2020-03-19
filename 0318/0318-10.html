@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      width: 500px;
+      position: relative;
+      padding: 30px;
+      background-color: #eee;
+    }
+    .p1::before{
+      content: '';
+      width: 50px;
+      height: 50px;
+      border-top: 1px solid #111;
+      border-left: 1px solid #111;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .p1::after{
+      content: '';
+      width: 50px;
+      height: 50px;
+      border-bottom: 1px solid #111;
+      border-right: 1px solid #111;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .p2::before{
+      content: ',,';
+      font-size: 30px;
+      width: 50px;
+      /* height: 300px; */
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .p2::after{
+      content: ',,';
+      font-size: 30px;
+      width: 50px;
+      /* height: 300px; */
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+
+  </style>
+</head>
+<body>
+  <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam, ex est, nam veniam aperiam aspernatur nulla rem fugiat sit ratione praesentium aliquid porro error autem provident, eligendi minima voluptatibus!</p>
+  <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam, ex est, nam veniam aperiam aspernatur nulla rem fugiat sit ratione praesentium aliquid porro error autem provident, eligendi minima voluptatibus!</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input:checked{
+      transform: scale(2);
+    }
+    input:checked + label{
+      color: #fa0;
+    }
+    input:checked ~ p{
+      color: #bd1;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="ooxx">
+  <label for="ooxx">for ooxx</label>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vero explicabo, placeat nemo ipsa molestiae consequuntur obcaecati maiores, animi distinctio exercitationem a totam eius id expedita. Fugit recusandae minus reprehenderit?</p>
+</body>
+</html>

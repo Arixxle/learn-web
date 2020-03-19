@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  .main-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+    height: 40px;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+  }
+  .logo img{
+    vertical-align: bottom;
+  }
+  .main-nav{
+      width: 100%;
+    }
+
+  .main-nav a{
+    background-color: #bdd;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 767px){
+    
+
+  #menu-control:checked ~ .main-header .main-nav{
+    display: block;
+  }
+  .main-nav{
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .hb{
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #888;
+    background-color: rgb(124, 206, 179);
+  }
+  .main-nav a{
+    display: block;
+  }
+  .main-nav a + a{
+    border-top: 1px solid #fff;
+  }
+  }
+
+  @media screen and (min-width: 768px){
+    .main-header{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .main-nav{
+      display: flex;
+    }
+  }
+
+
+
+
+</style>
+
+
+</head>
+<body>
+
+  <input type="checkbox" id="menu-control">
+  <!-- input寫在這邊，可以向下選到所有想選的，控制彈性較高 -->
+  <div class="main-header">
+    <div class="logo">
+      <a href="#">
+        <img src="https://fakeimg.pl/100x40/#555/" alt="">
+      </a>
+    </div>
+    <label for="menu-control" class="hb">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="main-nav">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+  </div>
+
+
+</body>
+</html>

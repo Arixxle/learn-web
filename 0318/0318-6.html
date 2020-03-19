@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    nav{
+      display: none;
+    }
+    #menu-control:checked ~ nav{
+      display: block;
+    }
+    #menu-control{
+      position: absolute;
+      left: -50px;
+      /* 把checkbox移到畫面外藏起來 */
+    }
+  </style>
+</head>
+<body>
+<input type="checkbox" id="menu-control">
+<label for="menu-control">點點點</label>
+<nav>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</nav>
+</body>
+</html>
