@@ -5,40 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    /* .box-fun{
-      width: 500px;
-      height: 400px;
-      background-color: #eee;
-    } */
     *{
       margin: 0;
       padding: 0;
       list-style: none;
-      outline: 1px solid red;
+      /* outline: 1px solid red; */
     }
-    .fun-group{
-      background-image: url(https://fakeimg.pl/500x300/#555/);
-      background-repeat: no-repeat;
-      background-position: 500px 300px;
-      background-color: aqua;
+    .fun-content-group{
+      width: 600px;
+      top: 0px;
+      z-index: 1;
+      margin: auto;
+      position: relative;
     }
     .summary-fun{
-      width: 400px;
+      width: 500px;
+      margin-bottom: 200px;
     }
-
-
     .sum-title{
       display: flex;
       background-color: rgb(179, 52, 52);
       align-items: center;
-      
     }
     .sum-title p{
       display: block;
     }
     .sum-title p:first-child{
       transform: rotate(90deg);
-      font-size: 80px;
+      font-size: 70px;
       color: #fff;
     }
     .sum-title p:last-child{
@@ -46,63 +40,63 @@
       color: #fff;
       margin-left: 20px;
     }
-
     .sum-content{
       padding: 15px;
       background-color: #000;
       color: #fff;
     }
     .sum-content h3{
-      font-size: 23px;
+      font-size: 25px;
       margin: 5px 0;
     }
     .sum-content{
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: 3px;
     }
-
-
-
-
     .fun-pic{
-      width: 700px;
-      padding-top: 100px;
-      margin: auto;
-      position: relative;
-      /* background-color: aqua; */
+      width: 570px;
+      position: absolute;
+      top: 250px;
+      z-index: -1;
+      margin-left: 20px;
     }
-
+    .pic{
+      width: 100%;
+      overflow: hidden; 
+    }
     .pic:before{
       content: '';
-      width: 400px;
+      width: 450px;
       height: 300px;
       background-color: #eee;
       display: block;
-      /* position: absolute; */
-      top: 20px;
-      right: -80px;
+      position: absolute;
+      top: -80px;
+      right: 20px;
       z-index: -1;
     }
     .pic img{
       vertical-align: bottom;
+      margin-left: -120px;
     }
-
     .detail-fun{
       background-color: #eee;
-      width: 700px;
+      width: 95%;
       padding: 20px;
       box-sizing: border-box;
+      margin-left: 20px;
+      margin-top: 150px;
     }
     .detail-fun h3{
       font-size: 22px;
       color: rgb(179, 22, 22);
-      /* margin-right: 10px; */
+      margin-bottom: 10px;
     }
     .detail-fun h3::after{
       content: '';
-      width: 300px;
+      width: 280px;
       height: 8px;
-      border-top: 1.5px solid rgb(179, 22, 22);
+      border-top: 1.2px solid rgb(179, 22, 22);
       display: inline-block;
       margin-left: 15px;
     }
@@ -118,7 +112,6 @@
       background-color: rgb(179, 22, 22);
       margin-right: 5px;
     }
-
     .detail-fun span:nth-of-type(1):before{
       content: '低重心設計';
       width: 100px;
@@ -149,13 +142,12 @@
       border-radius: 5px;
       padding: 2px 0;
     }
-
     .play-button{
       background-color: rgb(179, 22, 22);
       width: 50px;
       padding: 10px;
       border-radius: 2px;
-
+      margin-left: 530px;
     }
     .triangle{
       width: 0;
@@ -166,40 +158,86 @@
       margin: auto;
     }
 
+
+
+/* ---------------------------------992--------------------------- */
+    @media screen and (min-width: 992px){
+      .fun-content-group{
+      top: 0px;
+      left: -160px;
+      }
+
+      .fun-pic{
+      width: 700px;
+      top: 100px;
+      left: 160px;
+      }
+      .pic img{
+      vertical-align: bottom;
+      margin-left: 0;
+      }
+      .summary-fun{
+      width: 350px;
+      margin-bottom: 0px;
+      }
+
+      .detail-fun{
+      width: 700px;
+      padding: 20px;
+      margin-left: 60px;
+      }
+      .detail-fun h3::after{
+      content: '';
+      width: 420px;
+      display: inline-block;
+      margin-left: 15px;
+      }
+      .play-button{
+        margin-left: 820px;
+      }
+      .pic:before{
+      right: -70px;
+    }
+    }
+
+
+
   </style>
 </head>
 <body>
 
   <div class="fun-group">
-    <div class="box-fun"></div>
-    <div class="summary-fun">
-      <div class="sum-title">
-        <p>01</p>
-        <p>操縱樂趣</p>
+    <div class="fun-content-group">
+      <div class="summary-fun">
+        <div class="sum-title">
+          <p>01</p>
+          <p>操縱樂趣</p>
+        </div>
+        <div class="sum-content">
+          <h3>人人滿意的駕駛體驗</h3>
+          <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的彎道反饋，享受隨心馳騁的行使快感。</p>
+        </div>
       </div>
-      <div class="sum-content">
-        <h3>人人滿意的駕駛體驗</h3>
-        <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的彎道反饋，享受隨心馳騁的行使快感。</p>
+      
+      <div class="play-button">
+        <div class="triangle"></div>
+      </div>
+  
+      <div class="detail-fun">
+        <h3>因為我們做了這些革新</h3>
+        <span></span>
+        <p>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性</p>
+        <span></span>
+        <p>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕駛穩定性及安全性。</p>
+        <span></span>
+        <p>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭樂趣。</p>
+      </div>
+      <div class="fun-pic">
+        <div class="pic">
+          <img src="pic/advantage-1-video-button-bg.png" alt="">
+        </div>
       </div>
     </div>
-    <div class="fun-pic">
-      <div class="pic">
-        <img src="https://fakeimg.pl/695x430/#555/" alt="">
-      </div>
-    </div>
-    <div class="detail-fun">
-      <h3>因為我們做了這些革新</h3>
-      <span></span>
-      <p>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性</p>
-      <span></span>
-      <p>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕駛穩定性及安全性。</p>
-      <span></span>
-      <p>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭樂趣。</p>
-    </div>
-    <div class="play-button">
-      <div class="triangle"></div>
-    </div>
-
   </div>
 </body>
 </html>
