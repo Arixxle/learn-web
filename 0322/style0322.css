@@ -106,6 +106,8 @@ img{
 }
 
 
+
+
 .main-area{
   width: 100%;
 }
@@ -179,6 +181,10 @@ img{
 .col-md-10{width: 83.333333%;}
 .col-md-11{width: 91.666666%;}
 .col-md-12{width: 100%;} 
+/* .hb-menu nav{
+  display: none;
+} */
+
 }
 
 @media screen and (min-width: 992px){
