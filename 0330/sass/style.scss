@@ -1,0 +1,10 @@
+$color: red;
+
+.main-header{
+  color: $color;
+  .logo{
+    width: 100px;
+    height: 100px;
+    background-color: $color;
+  }
+}

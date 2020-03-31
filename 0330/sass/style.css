@@ -1,0 +1,10 @@
+.main-header {
+  color: red;
+}
+
+.main-header .logo {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+/*# sourceMappingURL=style.css.map */
